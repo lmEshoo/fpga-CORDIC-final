@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=H:\helloVHDL\impact.xsl
+OUTFILE=H:\helloVHDL\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=H:\helloVHDL
+LICENSE=iMPACT
+USER_INFO=iMPACT

@@ -1,0 +1,577 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.60 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.60 secs
+ 
+--> Reading design: calculator.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "calculator.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "calculator"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : calculator
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//es-egr-03/students/m/lmestar/helloVHDL/fulladder.vhd" in Library work.
+Architecture behavioral of Entity fa is up to date.
+Compiling vhdl file "//es-egr-03/students/m/lmestar/helloVHDL/bitAdder.vhd" in Library work.
+Architecture behavioral of Entity adder_4 is up to date.
+Compiling vhdl file "C:/Users/lmestar/Downloads/multi.vhd" in Library work.
+Architecture behavioral of Entity multi is up to date.
+Compiling vhdl file "C:/Users/lmestar/Downloads/divider.vhd" in Library work.
+Architecture behavioral of Entity divider is up to date.
+Compiling vhdl file "C:/Users/lmestar/Downloads/full_divider.vhd" in Library work.
+Architecture behavioral of Entity full_divider is up to date.
+Compiling vhdl file "C:/Users/lmestar/Downloads/fourBit_multi.vhd" in Library work.
+Architecture behavioral of Entity fourbit_multi is up to date.
+Compiling vhdl file "//es-egr-03/students/m/lmestar/helloVHDL/adderSub.vhd" in Library work.
+Architecture behavioral of Entity addsub is up to date.
+Compiling vhdl file "//es-egr-03/students/m/lmestar/helloVHDL/B2BCD.vhd" in Library work.
+WARNING:HDLParsers:1406 - "//es-egr-03/students/m/lmestar/helloVHDL/B2BCD.vhd" Line 50. No sensitivity list and no wait in the process
+Architecture behavioral of Entity b2bcd is up to date.
+Compiling vhdl file "//es-egr-03/students/m/lmestar/helloVHDL/calculator.vhd" in Library work.
+Entity <calculator> compiled.
+Entity <calculator> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <calculator> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <full_divider> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fourBit_multi> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <B2BCD> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <divider> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <multi> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Adder_4> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <FA> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <calculator> in library <work> (Architecture <Behavioral>).
+Entity <calculator> analyzed. Unit <calculator> generated.
+
+Analyzing Entity <full_divider> in library <work> (Architecture <behavioral>).
+Entity <full_divider> analyzed. Unit <full_divider> generated.
+
+Analyzing Entity <divider> in library <work> (Architecture <behavioral>).
+Entity <divider> analyzed. Unit <divider> generated.
+
+Analyzing Entity <fourBit_multi> in library <work> (Architecture <behavioral>).
+Entity <fourBit_multi> analyzed. Unit <fourBit_multi> generated.
+
+Analyzing Entity <multi> in library <work> (Architecture <behavioral>).
+Entity <multi> analyzed. Unit <multi> generated.
+
+Analyzing Entity <AddSub> in library <work> (Architecture <behavioral>).
+Entity <AddSub> analyzed. Unit <AddSub> generated.
+
+Analyzing Entity <Adder_4> in library <work> (Architecture <behavioral>).
+Entity <Adder_4> analyzed. Unit <Adder_4> generated.
+
+Analyzing Entity <FA> in library <work> (Architecture <behavioral>).
+Entity <FA> analyzed. Unit <FA> generated.
+
+Analyzing Entity <B2BCD> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "//es-egr-03/students/m/lmestar/helloVHDL/B2BCD.vhd" line 53: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <clk>
+WARNING:Xst:819 - "//es-egr-03/students/m/lmestar/helloVHDL/B2BCD.vhd" line 50: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <reset>
+Entity <B2BCD> analyzed. Unit <B2BCD> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <B2BCD>.
+    Related source file is "//es-egr-03/students/m/lmestar/helloVHDL/B2BCD.vhd".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit register for signal <PD0>.
+    Found 4-bit register for signal <PD1>.
+    Found 4-bit register for signal <PD2>.
+    Found 4-bit register for signal <QD0>.
+    Found 4-bit register for signal <QD1>.
+    Found 4-bit register for signal <RD0>.
+    Found 4-bit register for signal <RD1>.
+    Found 8-bit register for signal <A>.
+    Found 8-bit subtractor for signal <A$share0000> created at line 55.
+    Found 4-bit register for signal <D1>.
+    Found 4-bit adder for signal <D1$share0000> created at line 55.
+    Found 4-bit register for signal <D2>.
+    Found 4-bit adder for signal <D2$addsub0000> created at line 58.
+    Found 8-bit comparator greater for signal <state$cmp_gt0000> created at line 57.
+    Found 8-bit comparator greater for signal <state$cmp_gt0001> created at line 60.
+    Found 9-bit comparator greater for signal <state$cmp_gt0002> created at line 66.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  44 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <B2BCD> synthesized.
+
+
+Synthesizing Unit <divider>.
+    Related source file is "C:/Users/lmestar/Downloads/divider.vhd".
+    Found 1-bit xor3 for signal <sout>.
+    Found 1-bit xor2 for signal <L>.
+    Summary:
+	inferred   1 Xor(s).
+Unit <divider> synthesized.
+
+
+Synthesizing Unit <multi>.
+    Related source file is "C:/Users/lmestar/Downloads/multi.vhd".
+    Found 1-bit xor3 for signal <sout>.
+    Summary:
+	inferred   1 Xor(s).
+Unit <multi> synthesized.
+
+
+Synthesizing Unit <FA>.
+    Related source file is "//es-egr-03/students/m/lmestar/helloVHDL/fulladder.vhd".
+    Found 1-bit xor3 for signal <s>.
+    Summary:
+	inferred   1 Xor(s).
+Unit <FA> synthesized.
+
+
+Synthesizing Unit <full_divider>.
+    Related source file is "C:/Users/lmestar/Downloads/full_divider.vhd".
+WARNING:Xst:646 - Signal <B2<16>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <B2<12>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <B2<8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <B2<4:1>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <A1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <full_divider> synthesized.
+
+
+Synthesizing Unit <fourBit_multi>.
+    Related source file is "C:/Users/lmestar/Downloads/fourBit_multi.vhd".
+WARNING:Xst:646 - Signal <x<11:1>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <f> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000.
+Unit <fourBit_multi> synthesized.
+
+
+Synthesizing Unit <Adder_4>.
+    Related source file is "//es-egr-03/students/m/lmestar/helloVHDL/bitAdder.vhd".
+    Found 1-bit xor2 for signal <ov>.
+Unit <Adder_4> synthesized.
+
+
+Synthesizing Unit <AddSub>.
+    Related source file is "//es-egr-03/students/m/lmestar/helloVHDL/adderSub.vhd".
+    Found 4-bit xor2 for signal <z>.
+Unit <AddSub> synthesized.
+
+
+Synthesizing Unit <calculator>.
+    Related source file is "//es-egr-03/students/m/lmestar/helloVHDL/calculator.vhd".
+WARNING:Xst:646 - Signal <ov> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <WADD_RAM> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <WADD> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <RADD_RAM> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <calculator> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 4-bit adder                                           : 2
+ 8-bit subtractor                                      : 1
+# Registers                                            : 10
+ 4-bit register                                        : 9
+ 8-bit register                                        : 1
+# Comparators                                          : 3
+ 8-bit comparator greater                              : 2
+ 9-bit comparator greater                              : 1
+# Xors                                                 : 54
+ 1-bit xor2                                            : 17
+ 1-bit xor3                                            : 36
+ 4-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <B2BCD2/state/FSM> on signal <state[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 00
+ 001   | 01
+ 010   | 11
+ 011   | 10
+-------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 3
+ 4-bit adder                                           : 2
+ 8-bit subtractor                                      : 1
+# Registers                                            : 44
+ Flip-Flops                                            : 44
+# Comparators                                          : 3
+ 8-bit comparator greater                              : 2
+ 9-bit comparator greater                              : 1
+# Xors                                                 : 54
+ 1-bit xor2                                            : 17
+ 1-bit xor3                                            : 36
+ 4-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <calculator> ...
+
+Optimizing unit <B2BCD> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block calculator, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 46
+ Flip-Flops                                            : 46
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : calculator.ngr
+Top Level Output File Name         : calculator
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 39
+
+Cell Usage :
+# BELS                             : 151
+#      INV                         : 3
+#      LUT2                        : 14
+#      LUT2_D                      : 1
+#      LUT3                        : 17
+#      LUT3_D                      : 2
+#      LUT3_L                      : 1
+#      LUT4                        : 78
+#      LUT4_D                      : 4
+#      LUT4_L                      : 7
+#      MUXCY                       : 6
+#      MUXF5                       : 10
+#      VCC                         : 1
+#      XORCY                       : 7
+# FlipFlops/Latches                : 46
+#      FDC                         : 2
+#      FDE                         : 44
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 38
+#      IBUF                        : 10
+#      OBUF                        : 28
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       68  out of   4656     1%  
+ Number of Slice Flip Flops:             46  out of   9312     0%  
+ Number of 4 input LUTs:                127  out of   9312     1%  
+ Number of IOs:                          39
+ Number of bonded IOBs:                  39  out of    232    16%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 46    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 2     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 7.614ns (Maximum Frequency: 131.337MHz)
+   Minimum input arrival time before clock: 20.687ns
+   Maximum output required time after clock: 4.283ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.614ns (frequency: 131.337MHz)
+  Total number of paths / destination ports: 1026 / 74
+-------------------------------------------------------------------------
+Delay:               7.614ns (Levels of Logic = 11)
+  Source:            B2BCD2/A_2 (FF)
+  Destination:       B2BCD2/A_7 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: B2BCD2/A_2 to B2BCD2/A_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              7   0.591   0.787  B2BCD2/A_2 (B2BCD2/A_2)
+     LUT3_D:I1->LO         1   0.704   0.104  B2BCD2/state_cmp_gt00001_SW0 (N106)
+     LUT4:I3->O           15   0.704   1.021  B2BCD2/state_cmp_gt00001 (B2BCD2/state_cmp_gt0000)
+     LUT4:I3->O            1   0.704   0.000  B2BCD2/Msub_A_share0000_lut<1> (B2BCD2/Msub_A_share0000_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  B2BCD2/Msub_A_share0000_cy<1> (B2BCD2/Msub_A_share0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  B2BCD2/Msub_A_share0000_cy<2> (B2BCD2/Msub_A_share0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  B2BCD2/Msub_A_share0000_cy<3> (B2BCD2/Msub_A_share0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  B2BCD2/Msub_A_share0000_cy<4> (B2BCD2/Msub_A_share0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  B2BCD2/Msub_A_share0000_cy<5> (B2BCD2/Msub_A_share0000_cy<5>)
+     MUXCY:CI->O           0   0.059   0.000  B2BCD2/Msub_A_share0000_cy<6> (B2BCD2/Msub_A_share0000_cy<6>)
+     XORCY:CI->O           1   0.804   0.424  B2BCD2/Msub_A_share0000_xor<7> (B2BCD2/A_share0000<7>)
+     LUT4:I3->O            1   0.704   0.000  B2BCD2/A_mux0001<7>23 (B2BCD2/A_mux0001<7>)
+     FDE:D                     0.308          B2BCD2/A_7
+    ----------------------------------------
+    Total                      7.614ns (5.278ns logic, 2.336ns route)
+                                       (69.3% logic, 30.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1954 / 52
+-------------------------------------------------------------------------
+Offset:              20.687ns (Levels of Logic = 16)
+  Source:            a<1> (PAD)
+  Destination:       B2BCD2/A_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: a<1> to B2BCD2/A_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   1.218   1.226  a_1_IBUF (a_1_IBUF)
+     LUT3:I0->O            5   0.704   0.668  divider/Div1/cout_and00011 (divider/Div1/cout_and0001)
+     LUT3:I2->O            4   0.704   0.666  divider/Div3/cout_and00011 (B2BCD_Q<3>)
+     LUT3:I1->O            2   0.704   0.622  divider/Div4/cout1 (divider/L<4>)
+     LUT4:I0->O            2   0.704   0.447  divider/Div5/cout1 (divider/L<5>)
+     MUXF5:S->O            3   0.739   0.610  divider/Div7/cout_SW0_f5 (N47)
+     LUT4:I1->O            3   0.704   0.610  divider/Div7/cout (B2BCD_Q<2>)
+     LUT3:I1->O            2   0.704   0.622  divider/Div8/cout1 (divider/L<7>)
+     LUT4:I0->O            2   0.704   0.622  divider/Div9/cout1 (divider/L<8>)
+     LUT3:I0->O            1   0.704   0.455  divider/Div11/cout39 (divider/Div11/cout39)
+     LUT4:I2->O            5   0.704   0.712  divider/Div11/cout84 (B2BCD_Q<1>)
+     LUT4:I1->O            1   0.704   0.000  divider/Div13/cout_G (N98)
+     MUXF5:I1->O           1   0.321   0.595  divider/Div13/cout (divider/L<11>)
+     LUT4:I0->O            1   0.704   0.595  divider/Div14/cout (divider/L<12>)
+     LUT4:I0->O            1   0.704   0.499  B2BCD2/A_mux0001<0>168 (B2BCD2/A_mux0001<0>168)
+     LUT4:I1->O            1   0.704   0.000  B2BCD2/A_mux0001<0>186 (B2BCD2/A_mux0001<0>)
+     FDE:D                     0.308          B2BCD2/A_0
+    ----------------------------------------
+    Total                     20.687ns (11.738ns logic, 8.949ns route)
+                                       (56.7% logic, 43.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 28 / 28
+-------------------------------------------------------------------------
+Offset:              4.283ns (Levels of Logic = 1)
+  Source:            B2BCD2/PD0_3 (FF)
+  Destination:       PD0<3> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: B2BCD2/PD0_3 to PD0<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.591   0.420  B2BCD2/PD0_3 (B2BCD2/PD0_3)
+     OBUF:I->O                 3.272          PD0_3_OBUF (PD0<3>)
+    ----------------------------------------
+    Total                      4.283ns (3.863ns logic, 0.420ns route)
+                                       (90.2% logic, 9.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.79 secs
+ 
+--> 
+
+Total memory usage is 265364 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   14 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

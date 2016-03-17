@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "H:/helloVHDL/calculator.xst" -ofn "H:/helloVHDL/calculator.syr" 
+xst -intstyle ise -ifn "H:/helloVHDL/calculator.xst" -ofn "H:/helloVHDL/calculator.syr" 
+xst -intstyle ise -ifn "H:/helloVHDL/calculator.xst" -ofn "H:/helloVHDL/calculator.syr" 
+xst -intstyle ise -ifn "H:/helloVHDL/calculator.xst" -ofn "H:/helloVHDL/calculator.syr" 
+xst -intstyle ise -ifn "H:/helloVHDL/calculator.xst" -ofn "H:/helloVHDL/calculator.syr" 
+xst -intstyle ise -ifn "H:/helloVHDL/calculator.xst" -ofn "H:/helloVHDL/calculator.syr" 
+xst -intstyle ise -ifn "H:/helloVHDL/calculator.xst" -ofn "H:/helloVHDL/calculator.syr" 
+xst -intstyle ise -ifn "H:/helloVHDL/calculator.xst" -ofn "H:/helloVHDL/calculator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s500e-fg320-4 calculator.ngc calculator.ngd  

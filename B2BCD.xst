@@ -1,0 +1,5 @@
+set -tmpdir "H:/helloVHDL/xst/projnav.tmp"
+set -xsthdpdir "H:/helloVHDL/xst"
+elaborate
+-ifn B2BCD.prj
+-ifmt mixed

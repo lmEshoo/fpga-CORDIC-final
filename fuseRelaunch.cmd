@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "H:/helloVHDL/multisim_isim_beh.exe" -prj "H:/helloVHDL/multisim_beh.prj" "work.multisim" 

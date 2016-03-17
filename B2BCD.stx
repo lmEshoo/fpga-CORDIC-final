@@ -1,0 +1,44 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to H:/helloVHDL/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> Parameter xsthdpdir set to H:/helloVHDL/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//es-egr-03/students/m/lmestar/helloVHDL/B2BCD.vhd" in Library work.
+Entity <b2bcd> compiled.
+ERROR:HDLParsers:3292 - "//es-egr-03/students/m/lmestar/helloVHDL/B2BCD.vhd" Line 64. - has two or more possible definitions in this scope.  For example, parameter 2 (string value) can be: UNSIGNED or SIGNED
+ERROR:HDLParsers:3292 - "//es-egr-03/students/m/lmestar/helloVHDL/B2BCD.vhd" Line 65. + has two or more possible definitions in this scope.  For example, parameter 2 (string value) can be: UNSIGNED or SIGNED
+ERROR:HDLParsers:3292 - "//es-egr-03/students/m/lmestar/helloVHDL/B2BCD.vhd" Line 59. < has two or more possible definitions in this scope.  For example, parameter 2 (string value) can be: UNSIGNED or SIGNED
+ERROR:HDLParsers:3292 - "//es-egr-03/students/m/lmestar/helloVHDL/B2BCD.vhd" Line 73. - has two or more possible definitions in this scope.  For example, parameter 2 (string value) can be: UNSIGNED or SIGNED
+ERROR:HDLParsers:3292 - "//es-egr-03/students/m/lmestar/helloVHDL/B2BCD.vhd" Line 74. + has two or more possible definitions in this scope.  For example, parameter 2 (string value) can be: UNSIGNED or SIGNED
+ERROR:HDLParsers:3292 - "//es-egr-03/students/m/lmestar/helloVHDL/B2BCD.vhd" Line 68. < has two or more possible definitions in this scope.  For example, parameter 2 (string value) can be: UNSIGNED or SIGNED
+ERROR:HDLParsers:3292 - "//es-egr-03/students/m/lmestar/helloVHDL/B2BCD.vhd" Line 82. - has two or more possible definitions in this scope.  For example, parameter 2 (string value) can be: UNSIGNED or SIGNED
+ERROR:HDLParsers:3292 - "//es-egr-03/students/m/lmestar/helloVHDL/B2BCD.vhd" Line 83. + has two or more possible definitions in this scope.  For example, parameter 2 (string value) can be: UNSIGNED or SIGNED
+ERROR:HDLParsers:3292 - "//es-egr-03/students/m/lmestar/helloVHDL/B2BCD.vhd" Line 77. < has two or more possible definitions in this scope.  For example, parameter 2 (string value) can be: UNSIGNED or SIGNED
+WARNING:HDLParsers:1406 - "//es-egr-03/students/m/lmestar/helloVHDL/B2BCD.vhd" Line 48. No sensitivity list and no wait in the process
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.46 secs
+ 
+--> 
+
+Total memory usage is 212360 kilobytes
+
+Number of errors   :    9 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

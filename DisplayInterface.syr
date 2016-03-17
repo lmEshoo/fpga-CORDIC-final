@@ -1,0 +1,504 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: DisplayInterface.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "DisplayInterface.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "DisplayInterface"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-vq100
+
+---- Source Options
+Top Module Name                    : DisplayInterface
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "LCDI.v" in library work
+Module <LCDI> compiled
+No errors in compilation
+Analysis of file <"DisplayInterface.prj"> succeeded.
+ 
+Compiling vhdl file "//es-egr-03/students/m/lmestar/helloVHDL/DisplayInterface.vhd" in Library work.
+Architecture behavioral of Entity displayinterface is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <DisplayInterface> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for module <LCDI> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <DisplayInterface> in library <work> (Architecture <behavioral>).
+Entity <DisplayInterface> analyzed. Unit <DisplayInterface> generated.
+
+Analyzing module <LCDI> in library <work>.
+WARNING:Xst:905 - "LCDI.v" line 42: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <LCDRAM>
+Module <LCDI> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <control<0>> in unit <LCDI> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <R> in unit <LCDI> has a constant value of 1 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <LCDI>.
+    Related source file is "LCDI.v".
+    Found 32x8-bit dual-port RAM <Mram_LCDRAM> for signal <LCDRAM>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 44                                             |
+    | Transitions        | 87                                             |
+    | Inputs             | 8                                              |
+    | Outputs            | 44                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | 000000                                         |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 2-bit register for signal <control<2:1>>.
+    Found 4-bit register for signal <dataout>.
+    Found 5-bit register for signal <add>.
+    Found 5-bit adder for signal <add$addsub0000> created at line 137.
+    Found 26-bit register for signal <delay>.
+    Found 26-bit subtractor for signal <delay$share0000> created at line 47.
+    Found 8-bit register for signal <DR>.
+    Found 3-bit register for signal <sel>.
+    Found 3-bit subtractor for signal <sel$addsub0000> created at line 93.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 RAM(s).
+	inferred  48 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+Unit <LCDI> synthesized.
+
+
+Synthesizing Unit <DisplayInterface>.
+    Related source file is "//es-egr-03/students/m/lmestar/helloVHDL/DisplayInterface.vhd".
+Unit <DisplayInterface> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 32x8-bit dual-port RAM                                : 1
+# Adders/Subtractors                                   : 3
+ 26-bit subtractor                                     : 1
+ 3-bit subtractor                                      : 1
+ 5-bit adder                                           : 1
+# Registers                                            : 7
+ 1-bit register                                        : 2
+ 26-bit register                                       : 1
+ 3-bit register                                        : 1
+ 4-bit register                                        : 1
+ 5-bit register                                        : 1
+ 8-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <dev/state/FSM> on signal <state[1:44]> with one-hot encoding.
+--------------------------------------------------------
+ State  | Encoding
+--------------------------------------------------------
+ 000000 | 00000000000000000000000000000000000000000001
+ 000001 | 00000000000000000000000000000000000000000010
+ 000010 | 00000000000000000000000000000000000000000100
+ 000011 | 00000000000000000000000000000000000000001000
+ 000100 | 00000000000000000000000000000000000000010000
+ 000101 | 00000000000000000000000000000000000000100000
+ 000110 | 00000000000000000000000000000000000001000000
+ 000111 | 00000000000000000000000000000000000010000000
+ 001000 | 00000000000000000000000000000000000100000000
+ 001001 | 00000000000000000000000000000000001000000000
+ 001010 | 00000000000000000000000000000000010000000000
+ 001011 | 00000000000000000000000000000001000000000000
+ 001100 | 00000000000000000000000000000010000000000000
+ 001101 | 00000000000000000000000000000100000000000000
+ 001110 | 00000000000000000000000000001000000000000000
+ 001111 | 00000000000000000000000000010000000000000000
+ 010000 | 00000000000000000000000000100000000000000000
+ 010001 | 00000000000000000000000001000000000000000000
+ 010010 | 00000000000000000000000010000000000000000000
+ 010011 | 00000000000000000000000100000000000000000000
+ 010100 | 00000000000000000000000000000000100000000000
+ 010101 | 00000000000000000000001000000000000000000000
+ 010110 | 00000000000000000000010000000000000000000000
+ 010111 | 00000000000000000000100000000000000000000000
+ 011000 | 00000000000000000001000000000000000000000000
+ 011001 | 00000000000000000010000000000000000000000000
+ 011010 | 00000000000000000100000000000000000000000000
+ 011011 | 00000000000000001000000000000000000000000000
+ 011100 | 00000000000000010000000000000000000000000000
+ 011101 | 00000000000000100000000000000000000000000000
+ 011110 | 00000000000001000000000000000000000000000000
+ 011111 | 00000000000010000000000000000000000000000000
+ 100000 | 00000000000100000000000000000000000000000000
+ 100001 | 00000000001000000000000000000000000000000000
+ 100010 | 00000000010000000000000000000000000000000000
+ 100011 | 00000000100000000000000000000000000000000000
+ 100100 | 00000001000000000000000000000000000000000000
+ 100101 | 00000010000000000000000000000000000000000000
+ 100110 | 00000100000000000000000000000000000000000000
+ 100111 | 00001000000000000000000000000000000000000000
+ 101000 | 00010000000000000000000000000000000000000000
+ 101001 | 00100000000000000000000000000000000000000000
+ 101010 | 01000000000000000000000000000000000000000000
+ 101011 | 10000000000000000000000000000000000000000000
+--------------------------------------------------------
+
+Synthesizing (advanced) Unit <LCDI>.
+INFO:Xst:3231 - The small RAM <Mram_LCDRAM> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 8-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <W>             | high     |
+    |     addrA          | connected to signal <WADD>          |          |
+    |     diA            | connected to signal <DIN>           |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 8-bit                     |          |
+    |     addrB          | connected to signal <add>           |          |
+    |     doB            | connected to signal <datain>        |          |
+    -----------------------------------------------------------------------
+Unit <LCDI> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# RAMs                                                 : 1
+ 32x8-bit dual-port distributed RAM                    : 1
+# Adders/Subtractors                                   : 3
+ 26-bit subtractor                                     : 1
+ 3-bit subtractor                                      : 1
+ 5-bit adder                                           : 1
+# Registers                                            : 48
+ Flip-Flops                                            : 48
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <DisplayInterface> ...
+
+Optimizing unit <LCDI> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block DisplayInterface, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 92
+ Flip-Flops                                            : 92
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : DisplayInterface.ngr
+Top Level Output File Name         : DisplayInterface
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 22
+
+Cell Usage :
+# BELS                             : 311
+#      GND                         : 1
+#      INV                         : 25
+#      LUT1                        : 1
+#      LUT2                        : 14
+#      LUT2_D                      : 3
+#      LUT2_L                      : 13
+#      LUT3                        : 31
+#      LUT3_D                      : 6
+#      LUT3_L                      : 3
+#      LUT4                        : 118
+#      LUT4_D                      : 11
+#      LUT4_L                      : 19
+#      MUXCY                       : 32
+#      MUXF5                       : 7
+#      VCC                         : 1
+#      XORCY                       : 26
+# FlipFlops/Latches                : 92
+#      FD                          : 27
+#      FDE                         : 28
+#      FDR                         : 1
+#      FDS                         : 30
+#      FDSE                        : 6
+# RAMS                             : 16
+#      RAM16X1D                    : 16
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 21
+#      IBUF                        : 14
+#      OBUF                        : 7
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500evq100-5 
+
+ Number of Slices:                      131  out of   4656     2%  
+ Number of Slice Flip Flops:             92  out of   9312     0%  
+ Number of 4 input LUTs:                276  out of   9312     2%  
+    Number used as logic:               244
+    Number used as RAMs:                 32
+ Number of IOs:                          22
+ Number of bonded IOBs:                  22  out of     66    33%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 108   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 7.869ns (Maximum Frequency: 127.081MHz)
+   Minimum input arrival time before clock: 3.234ns
+   Maximum output required time after clock: 4.134ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.869ns (frequency: 127.081MHz)
+  Total number of paths / destination ports: 8103 / 221
+-------------------------------------------------------------------------
+Delay:               7.869ns (Levels of Logic = 6)
+  Source:            dev/state_FSM_FFd26 (FF)
+  Destination:       dev/delay_25 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: dev/state_FSM_FFd26 to dev/delay_25
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.514   0.603  dev/state_FSM_FFd26 (dev/state_FSM_FFd26)
+     LUT4:I0->O            1   0.612   0.387  dev/delay_or0004_SW0_SW0 (N50)
+     LUT4:I2->O            9   0.612   0.766  dev/delay_or0004 (dev/delay_or0004)
+     LUT4:I1->O            6   0.612   0.572  dev/delay_mux0000<21>1 (dev/N10)
+     LUT4_D:I3->O          9   0.612   0.700  dev/delay_mux0000<11>21_2 (dev/delay_mux0000<11>21_1)
+     LUT4:I3->O            1   0.612   0.387  dev/delay_mux0000<18>23_SW9 (N75)
+     LUT4:I2->O            1   0.612   0.000  dev/delay_mux0000<25>1 (dev/delay_mux0000<25>)
+     FD:D                      0.268          dev/delay_0
+    ----------------------------------------
+    Total                      7.869ns (4.454ns logic, 3.415ns route)
+                                       (56.6% logic, 43.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 112 / 96
+-------------------------------------------------------------------------
+Offset:              3.234ns (Levels of Logic = 2)
+  Source:            WADD<4> (PAD)
+  Destination:       dev/Mram_LCDRAM16 (RAM)
+  Destination Clock: clk rising
+
+  Data Path: WADD<4> to dev/Mram_LCDRAM16
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.106   0.532  WADD_4_IBUF (WADD_4_IBUF)
+     LUT2:I0->O            8   0.612   0.643  dev/write_ctrl1 (dev/write_ctrl1)
+     RAM16X1D:WE               0.341          dev/Mram_LCDRAM2
+    ----------------------------------------
+    Total                      3.234ns (2.059ns logic, 1.175ns route)
+                                       (63.7% logic, 36.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              4.134ns (Levels of Logic = 1)
+  Source:            dev/control_1 (FF)
+  Destination:       Control<1> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: dev/control_1 to Control<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              3   0.514   0.451  dev/control_1 (dev/control_1)
+     OBUF:I->O                 3.169          Control_1_OBUF (Control<1>)
+    ----------------------------------------
+    Total                      4.134ns (3.683ns logic, 0.451ns route)
+                                       (89.1% logic, 10.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.09 secs
+ 
+--> 
+
+Total memory usage is 282644 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

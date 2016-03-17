@@ -1,0 +1,28 @@
+Command line:
+   b2bcd_a_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  57831
+
+Mon Feb 22 19:35:48 2016
+
+
+ Elaboration Time: 0.280802 sec
+
+ Current Memory Usage: 1474.11 Meg
+
+ Total Signals          : 21
+ Total Nets             : 53
+ Total Signal Drivers   : 12
+ Total Blocks           : 6
+ Total Primitive Blocks : 5
+ Total Processes        : 3
+ Total Traceable Variables  : 16
+ Total Scalar Nets and Variables : 555
+
+ Total Simulation Time: 0.312002 sec
+
+ Current Memory Usage: 1631.36 Meg
+
+Mon Feb 22 19:36:50 2016
+

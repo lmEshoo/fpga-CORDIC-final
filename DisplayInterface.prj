@@ -1,0 +1,2 @@
+verilog work "LCDI.v"
+vhdl work "DisplayInterface.vhd"

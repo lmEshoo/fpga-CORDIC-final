@@ -1,0 +1,2 @@
+vhdl isim_temp "B2BCD.vhd"
+vhdl isim_temp "b2bcd_test.vhd"
